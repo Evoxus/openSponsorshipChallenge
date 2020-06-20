@@ -1,15 +1,19 @@
 'use strict';
 
-describe('myApp.version module', function() {
-  beforeEach(module('myApp.version'));
+describe('athleteProfile.version module', function () {
+  beforeEach(module('athleteProfile.version'));
 
-  describe('interpolate filter', function() {
-    beforeEach(module(function($provide) {
-      $provide.value('version', 'TEST_VER');
-    }));
+  describe('interpolate filter', function () {
+    beforeEach(
+      module(function ($provide) {
+        $provide.value('version', 'TEST_VER');
+      })
+    );
 
-    it('should replace VERSION', inject(function(interpolateFilter) {
-      expect(interpolateFilter('before %VERSION% after')).toEqual('before TEST_VER after');
+    it('should replace VERSION', inject(function (interpolateFilter) {
+      expect(interpolateFilter('before %VERSION% after')).toEqual(
+        'before TEST_VER after'
+      );
     }));
   });
 });
