@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "athlete-profile",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "description": "A code challenge for openSponsorship",
+  "repository": "",
   "license": "MIT",
   "dependencies": {
     "angular": "^1.7.5",

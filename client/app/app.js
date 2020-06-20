@@ -4,8 +4,11 @@
 angular
   .module('athleteProfile', [
     'ngRoute',
-    'athleteProfile.view1',
-    'athleteProfile.view2',
+    'athleteProfile.basicInfo',
+    'athleteProfile.about',
+    'athleteProfile.socialMedia',
+    'athleteProfile.summary',
+    'athleteProfile.profileList',
     'athleteProfile.version',
   ])
   .config([
@@ -14,6 +17,6 @@ angular
     function ($locationProvider, $routeProvider) {
       $locationProvider.hashPrefix('!');
 
-      $routeProvider.otherwise({ redirectTo: '/view1' });
+      $routeProvider.otherwise({ redirectTo: '/basicInfo' });
     },
   ]);
