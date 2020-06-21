@@ -1,1 +1,38 @@
-<p>basic info</p>
+<main class="container">
+  <div class="jumbotron">
+    <h2>Basic Information</h2>
+    <form>
+      <input class="form-control" type="text" name="name" id="name" placeholder="Full Name" />
+      <label for="sport">Sport</label>
+      <select name="sport" class="form-control">
+        <option value="golf">Golf</option>
+        <option value="tennis">Tennis</option>
+        <option value="cricket">Cricket</option>
+        <option value="basketball">Basketball</option>
+      </select>
+      <label for="nationality">Nationality</label>
+      <select name="nationality" id="nationality" class="form-control">
+        <option value="usa">United States America</option>
+        <option value="uk">Great Britain</option>
+        <option value="uganda">Uganda</option>
+      </select>
+      <div class="form-group">
+        <p>Gender</p>
+        <label for="male">
+          <input type="radio" name="male" id="male" value="gender-male" />
+          Male</label>
+        <label for="female">
+          <input type="radio" name="female" id="female" value="gender-female" />
+          Female</label>
+        <label for="other">
+          <input type="radio" name="other" id="gender-other" value="other">
+          Other</label>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input class="form-control" type="date" name="dob" id="dob" />
+      </div>
+      <a class="btn btn-primary" href="#!/about" role="button">Next</a>
+    </form>
+  </div>
+</main>
