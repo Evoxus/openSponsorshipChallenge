@@ -4,6 +4,8 @@
 angular
   .module('athleteProfile', [
     'ngRoute',
+    'ngAnimate',
+    'ui.bootstrap',
     'athleteProfile.basicInfo',
     'athleteProfile.about',
     'athleteProfile.socialMedia',
@@ -19,4 +21,14 @@ angular
 
       $routeProvider.otherwise({ redirectTo: '/basicInfo' });
     },
-  ]);
+  ])
+  .controller('DropdownController', DropdownController);
+
+function DropdownController() {
+  var vm = this;
+
+  vm.isCollapsed = true;
+  vm.status = {
+    isopen: false,
+  };
+}

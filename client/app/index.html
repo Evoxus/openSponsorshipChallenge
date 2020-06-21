@@ -21,14 +21,21 @@
 </head>
 
 <body>
-  <ul class="menu">
-    <li><a href="#!/basicInfo">Basic Info</a></li>
-    <li><a href="#!/about">About</a></li>
-    <li><a href="#!/socialMedia">Social Media</a></li>
-    <li><a href="#!/summary">Summary</a></li>
-    <li><a href="#!/profileList">Profile List</a></li>
+  <nav ng-controller="DropdownController as vm" class="navbar navbar-light navbar-expand-lg"
+    style="background-color: #e3f2fd;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a class="nav-link" href="#!/basicInfo">Basic Info</a></li>
+      <li class="nav-item"><a class="nav-link" href="#!/about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#!/socialMedia">Social Media</a></li>
+      <li class="nav-item"><a class="nav-link" href="#!/summary">Summary</a></li>
+      <li class="nav-item"><a class="nav-link" href="#!/profileList">Profile List</a></li>
+    </ul>
+  </nav>
 
-  </ul>
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -36,13 +43,13 @@
 
   <div ng-view></div>
 
-  <div>AngularJS seed app: v<span app-version></span></div>
-
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-animate.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.min.js"></script>
   <script src="app.js"></script>
   <script src="views/basicInfo/basicInfo.js"></script>
   <script src="views/about/about.js"></script>
