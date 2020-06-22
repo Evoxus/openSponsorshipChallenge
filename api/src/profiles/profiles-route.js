@@ -1,5 +1,6 @@
 const express = require('express');
-const profilesService = require('./profiles-service');
+const mongoose = require('mongoose');
+const Profile = mongoose.model('Profile');
 
 const profilesRouter = express.Router();
 const jsonBodyParser = express.json();
@@ -7,60 +8,38 @@ const jsonBodyParser = express.json();
 profilesRouter
   .route('/')
   .get((req, res, next) => {
-    if (req.url !== '/') {
-      return res.status(400).json({ error: 'NO PARAMS HERE' });
-    }
-    return profilesService
-      .getAllProfiles(req.app.get('db'), req.payload.sub)
-      .then((allProfiles) =>
-        res.status(200).json(profilesService.cleanProfiles(allProfiles))
-      )
-      .catch(next);
+    Profile.find(function (err, profiles) {
+      if (err) {
+        return res.send(500, err);
+      }
+      return res.send(profiles);
+    }).catch(next);
   })
-
   .post(jsonBodyParser, (req, res, next) => {
-    const { name } = req.body;
-    if (!name) {
-      return res.status(400).json({ error: 'missing required content' });
-    }
-    if (name.trim().length === 0) {
-      return res.status(400).json({ error: 'empty string in request body' });
-    }
-
-    return profilesService
-      .checkIfProfileExists(req.app.get('db'), name)
-      .then((check) => {
-        if (check.length > 0) {
-          return res.status(400).end();
+    const profile = new Profile();
+    const { profile } = req.body;
+    profile
+      .save(function (err, profile) {
+        if (err) {
+          return res.send(500, err);
         }
-        return profilesService
-          .addProfile(req.app.get('db'), name)
-          .then((profile) => res.status(201).json(profile))
-          .catch(next);
-      });
+        return res.json(profile);
+      })
+      .catch(next);
   });
 
 profilesRouter.route('/:profileId').patch(jsonBodyParser, (req, res, next) => {
-  const { profileId } = req.params;
-  let { name } = req.body;
-  name = name.trim();
+  Profile.findById(req.params.id, function (err, profile) {
+    if (err) res.send(err);
 
-  if (!Number(profileId)) {
-    return res.status(400).send({ error: 'invalid query' });
-  }
+    let { profile } = req.body;
 
-  if (!name) {
-    return res.status(400).send({ error: 'missing content in request body' });
-  }
+    profile.save(function (err, profile) {
+      if (err) res.send(err);
 
-  if (name.length === 0) {
-    return res.status(400).send({ error: 'required field empty' });
-  }
-
-  return profilesService
-    .updateProfile(req.app.get('db'), profileId, name)
-    .then((profile) => res.status(200).json(profile))
-    .catch(next);
+      res.json(profile);
+    });
+  }).catch(next);
 });
 
 module.exports = profilesRouter;
