@@ -24,11 +24,6 @@ angular
   ])
   .controller('DropdownController', DropdownController);
 
-function DropdownController() {
-  var vm = this;
-
-  vm.isCollapsed = true;
-  vm.status = {
-    isopen: false,
-  };
+function DropdownController($scope) {
+  $scope.isNavCollapsed = true;
 }
