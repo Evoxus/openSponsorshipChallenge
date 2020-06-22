@@ -1,38 +1,37 @@
-<main class="container">
+<main class="container" ng-controller="summaryCtrl">
   <div class="jumbotron">
     <h2>Basic Information</h2>
     <form>
       <label for="name">Name</label>
-      <input class="form-control" type="text" name="name" id="name" placeholder="Full Name" />
+      <input ng-model="$parent.setName" class="form-control" type="text" name="name" id="name"
+        placeholder="Full Name" />
       <label for="sports">Sports</label>
       <!-- refactor to checkboxes for multiple selection and get sports list from api -->
-      <select name="sports" class="form-control">
+      <select ng-model="sports" name="sports" class="form-control">
         <option value="golf">Golf</option>
         <option value="tennis">Tennis</option>
         <option value="cricket">Cricket</option>
         <option value="basketball">Basketball</option>
       </select>
       <label for="nationality">Nationality</label>
-      <select name="nationality" id="nationality" class="form-control">
+      <select ng-model="nationality" name="nationality" id="nationality" class="form-control">
+        <option>-- Please Select One --</option>
         <option value="usa">United States America</option>
         <option value="uk">Great Britain</option>
         <option value="uganda">Uganda</option>
       </select>
       <div class="form-group">
-        <p>Gender</p>
-        <label for="male">
-          <input type="radio" name="male" id="male" value="gender-male" />
-          Male</label>
-        <label for="female">
-          <input type="radio" name="female" id="female" value="gender-female" />
-          Female</label>
-        <label for="other">
-          <input type="radio" name="other" id="gender-other" value="other">
-          Other</label>
+        <label for="gender">Gender</label>
+        <select ng-model="gender" name="gender" id="gender">
+          <option>-- Please Select One --</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="dob">Date of Birth</label>
-        <input class="form-control" type="date" name="dob" id="dob" />
+        <input ng-model="dob" class="form-control" type="date" name="dob" id="dob" />
       </div>
       <a class="btn btn-primary" href="#!/about" role="button">Next</a>
     </form>

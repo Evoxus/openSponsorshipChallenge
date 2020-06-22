@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('athleteProfile.summary', ['ngRoute'])
+  .module('athleteProfile.summary', ['ngRoute', 'athleteProfile'])
 
   .config([
     '$routeProvider',
@@ -12,5 +12,4 @@ angular
       });
     },
   ])
-
-  .controller('summaryCtrl', [function () {}]);
+  .controller('summaryCtrl', function ($scope) {});
