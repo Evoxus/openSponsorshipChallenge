@@ -8,8 +8,8 @@ angular
     function ($routeProvider) {
       $routeProvider.when('/summary', {
         templateUrl: 'views/summary/summary.html',
-        controller: 'summaryCtrl',
+        controller: 'AthleteController',
       });
     },
   ])
-  .controller('summaryCtrl', function ($scope) {});
+  .controller('AthleteController', ['$scope', '$window', 'Profile', AthleteController]);

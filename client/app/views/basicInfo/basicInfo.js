@@ -8,9 +8,9 @@ angular
     function ($routeProvider) {
       $routeProvider.when('/basicInfo', {
         templateUrl: 'views/basicInfo/basicInfo.html',
-        controller: 'basicInfoCtrl',
+        controller: 'AthleteController',
       });
     },
   ])
-
-  .controller('basicInfoCtrl', [function () {}]);
+  .controller('AthleteController', ['$scope', '$window', 'Profile', AthleteController]);
+  
