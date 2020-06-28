@@ -1,47 +1,83 @@
-<main class="container">
-  <div class="jumbotron">
-    <h2>About</h2>
-    <form>
-      <div class="form-group">
-        <label for="descripiton">Description</label>
-        <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="location">Location</label>
-        <input class="form-control" type="text" name="location" id="location" />
-      </div>
-      <div class="form-group">
-        <label for="team">Team</label>
-        <input class="form-control" type="text" name="team" id="team" placeholder="e.g. New York Giants" />
-      </div>
-      <div class="form-group">
-        <label for="association">Association</label>
-        <input class="form-control" type="text" name="association" id="association" placeholder="e.g. NBA, NFL" />
-      </div>
-      <div class="form-group">
-        <label for="interests">Interests</label>
-        <input class="form-control" type="text" name="interests" id="interests" />
-      </div>
-      <div class="form-group">
-        <label for="charities">Charities</label>
-        <input class="form-control" type="text" name="charities" id="charities" />
-      </div>
-      <div class="form-group">
-        <label for="pets">Pets</label>
-        <input class="form-control" type="text" name="pets" id="pets" />
-      </div>
-      <div class="form-group">
-        <p>Married</p>
-        <label for="married-yes"><input type="radio" name="married-yes" id="married-yes" value="yes" />Yes</label>
-        <label for="married-no"><input type="radio" name="married-no" id="married-no" value="no" />No</label>
-      </div>
-      <div class="form-group">
-        <p>Drink Alcohol</p>
-        <label for="drinks-yes"><input type="radio" name="drinks-yes" id="drinks-yes" value="yes" /> Yes</label>
-        <label for="drinks-no"><input type="radio" name="drinks-no" id="drinks-no" value="no" /> No</label>
-      </div>
-      <a class="btn btn-secondary" href="#!/basicInfo" role="button">Back</a>
-      <a class="btn btn-primary" href="#!/socialMedia" role="button">Next</a>
-    </form>
-  </div>
-</main>
+<h2>About</h2>
+<div class="form-group">
+  <label for="descripiton">Description</label>
+  <textarea
+    class="form-control"
+    name="description"
+    id="description"
+    cols="20"
+    rows="5"
+    ng-model="newProfile.description"
+  ></textarea>
+</div>
+<div class="form-group">
+  <label for="location">Location</label>
+  <input class="form-control" type="text" name="location" id="location" ng-model="newProfile.location"/>
+</div>
+<div class="form-group">
+  <label for="team">Team</label>
+  <input
+    class="form-control"
+    type="text"
+    name="team"
+    id="team"
+    placeholder="e.g. New York Giants"
+ng-model="newProfile.team"
+  />
+</div>
+<div class="form-group">
+  <label for="association">Association</label>
+  <input
+    class="form-control"
+    type="text"
+    name="association"
+    id="association"
+    placeholder="e.g. NBA, NFL"
+    ng-model="newProfile.association"
+  />
+</div>
+<div class="form-group">
+  <label for="interests">Interests</label>
+  <input class="form-control" type="text" name="interests" id="interests" ng-model="newProfile.interests"/>
+</div>
+<div class="form-group">
+  <label for="charities">Charities</label>
+  <input class="form-control" type="text" name="charities" id="charities" ng-model="newProfile.charities"/>
+</div>
+<div class="form-group">
+  <label for="pets">Pets</label>
+  <input class="form-control" type="text" name="pets" id="pets" ng-model="newProfile.pets"/>
+</div>
+<div class="form-group">
+  <p>Married</p>
+  <label for="married-yes"
+    ><input
+      type="radio"
+      name="married-yes"
+      id="married-yes"
+      value="yes"
+      ng-model="newProfile.married"
+    />Yes</label
+  >
+  <label for="married-no"
+    ><input
+      type="radio"
+      name="married-no"
+      id="married-no"
+      value="no"
+      ng-model="newProfile.married"
+    />No</label
+  >
+</div>
+<div class="form-group">
+  <p>Drink Alcohol</p>
+  <label for="drinks-yes"
+    ><input type="radio" name="drinks-yes" id="drinks-yes" value="yes" ng-model="newProfile.drinks"/>
+    Yes</label
+  >
+  <label for="drinks-no"
+    ><input type="radio" name="drinks-no" id="drinks-no" value="no" ng-model="newProfile.drinks"/> No</label
+  >
+</div>
+<a class="btn btn-secondary" ui-sref="profile.basicInfo" role="button">Back</a>
+<a class="btn btn-primary" ui-sref="profile.socialMedia" role="button">Next</a>
