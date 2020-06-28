@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const Profile = mongoose.model('Profile');
+const profileSchema = require('./profile-model');
+const Profile = mongoose.model('Profile', profileSchema);
 
 const profilesRouter = express.Router();
 const jsonBodyParser = express.json();
