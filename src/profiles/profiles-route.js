@@ -17,17 +17,15 @@ profilesRouter
     }).catch(next);
   })
   .post(jsonBodyParser, (req, res, next) => {
-    const profileModel = new Profile();
     const { basicInfo, about, socialMedia } = req.body;
     const newProfile = { basicInfo, about, socialMedia };
-    profileModel
-      .save(function (err) {
+    Profile
+      .create(newProfile, function (err, newProfile) {
         if (err) {
           return res.send(500, err);
         }
         return res.json(newProfile);
       })
-      .catch(next);
   });
 
 profilesRouter.route('/:profileId').patch(jsonBodyParser, (req, res, next) => {
