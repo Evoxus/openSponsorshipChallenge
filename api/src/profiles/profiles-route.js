@@ -16,14 +16,15 @@ profilesRouter
     }).catch(next);
   })
   .post(jsonBodyParser, (req, res, next) => {
-    const profile = new Profile();
-    const { profile } = req.body;
-    profile
-      .save(function (err, profile) {
+    const profileModel = new Profile();
+    const { basicInfo, about, socialMedia } = req.body;
+    const newProfile = { basicInfo, about, socialMedia };
+    profileModel
+      .save(function (err) {
         if (err) {
           return res.send(500, err);
         }
-        return res.json(profile);
+        return res.json(newProfile);
       })
       .catch(next);
   });
@@ -32,12 +33,13 @@ profilesRouter.route('/:profileId').patch(jsonBodyParser, (req, res, next) => {
   Profile.findById(req.params.id, function (err, profile) {
     if (err) res.send(err);
 
-    let { profile } = req.body;
+    const { basicInfo, about, socialMedia } = req.body;
+    const profileUpdate = { basicInfo, about, socialMedia };
 
-    profile.save(function (err, profile) {
+    profile.save(function (err) {
       if (err) res.send(err);
 
-      res.json(profile);
+      res.json(profileUpdate);
     });
   }).catch(next);
 });
