@@ -5,6 +5,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const { NODE_ENV } = require('./config');
 const profilesRouter = require('./profiles/profiles-route');
+const mongoose = require('mongoose');
 
 const app = express();
 
@@ -24,6 +25,9 @@ app.use(function errorHandler(error, req, res, next) {
   }
   res.status(500).json(response);
 });
+
+const DBURL = process.env.DATABASEURL || 'mongodb://localhost:27017/athlete_profile';
+mongoose.connect(DBURL, { useUnifiedTopology: true });
 
 app.use('/api/profiles', profilesRouter);
 
