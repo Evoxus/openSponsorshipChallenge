@@ -8,14 +8,429 @@
   id="name"
   placeholder="Full Name"
 />
-<label for="sports">Sports</label>
-<!-- refactor to checkboxes for multiple selection and get sports list from api -->
-<select ng-model="newProfile.sports" name="sports" class="form-control">
-  <option value="golf">Golf</option>
-  <option value="tennis">Tennis</option>
-  <option value="cricket">Cricket</option>
-  <option value="basketball">Basketball</option>
-</select>
+<fieldset>
+  <legend>Sports</legend>
+  <div class="form-check">
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="golf"
+      ng-true-value="golf"
+      class="form-check-input"
+    /><label for="golf" class="form-check-label">Golf</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="tennis"
+      value="tennis"
+      class="form-check-input"
+    /><label for="tennis" class="form-check-label">Tennis</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="cricket"
+      value="cricket"
+      class="form-check-input"
+    /><label for="cricket" class="form-check-label">Cricket</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="basketball"
+      value="basketball"
+      class="form-check-input"
+    /><label for="basketball" class="form-check-label">Basketball</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="baseball"
+      value="baseball"
+      class="form-check-input"
+    /><label for="baseball" class="form-check-label">Baseball</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="american-football"
+      value="american-football"
+      class="form-check-input"
+    /><label for="american-football" class="form-check-label"
+      >American Football</label
+    >
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="aquatics"
+      value="aquatics"
+      class="form-check-input"
+    /><label for="aquatics" class="form-check-label">Aquatics</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="archery"
+      value="archery"
+      class="form-check-input"
+    /><label for="archery" class="form-check-label">Archery</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="automobile-racing"
+      value="automobile-racing"
+      class="form-check-input"
+    /><label for="automobile-racing" class="form-check-label"
+      >Automobile Racing</label
+    >
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="badminton"
+      value="badminton"
+      class="form-check-input"
+    /><label for="badminton" class="form-check-label">Badminton</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="beach-volleyball"
+      value="beach-volleyball"
+      class="form-check-input"
+    /><label for="beach-volleyball" class="form-check-label"
+      >Beach Volleyball</label
+    >
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="bobsleigh"
+      value="bobsleigh"
+      class="form-check-input"
+    /><label for="bobsleigh" class="form-check-label">Bobsleigh</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="body-building"
+      value="body-building"
+      class="form-check-input"
+    /><label for="body-building" class="form-check-label">Body Building</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="boxing"
+      value="boxing"
+      class="form-check-input"
+    /><label for="boxing" class="form-check-label">Boxing</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="cross-country-running"
+      value="cross-country-running"
+      class="form-check-input"
+    /><label for="cross-country-running" class="form-check-label"
+      >Cross Country Running</label
+    >
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="cross-country-skiing"
+      value="cross-country-skiing"
+      class="form-check-input"
+    /><label for="cross-country-skiing" class="form-check-label"
+      >Cross Country Skiing</label
+    >
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="curling"
+      value="curling"
+      class="form-check-input"
+    /><label for="curling" class="form-check-label">Curling</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="cycling"
+      value=""
+      cycling
+      class="form-check-input"
+    /><label for="cycling" class="form-check-label">Cycling</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="darts"
+      value="darts"
+      class="form-check-input"
+    /><label for="darts" class="form-check-label">Darts</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="decathlon"
+      value="decathlon"
+      class="form-check-input"
+    /><label for="decathlon" class="form-check-label">Decathlon</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="down-hill-skiing"
+      value="down-hill-skiing"
+      class="form-check-input"
+    /><label for="down-hill-skiing" class="form-check-label"
+      >Down Hill Skiing</label
+    >
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="equestrianism"
+      value="equestrianism"
+      class="form-check-input"
+    /><label for="equestrianism" class="form-check-label">Equestrianism</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="esports"
+      value="esports"
+      class="form-check-input"
+    /><label for="esports" class="form-check-label">eSports</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="fencing"
+      value="fencing"
+      class="form-check-input"
+    /><label for="fencing" class="form-check-label">Fencing</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="field-hockey"
+      value="field-hockey"
+      class="form-check-input"
+    /><label for="field-hockey" class="form-check-label">Field Hockey</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="figure-skating"
+      value="figure-skating"
+      class="form-check-input"
+    /><label for="figure-skating" class="form-check-label"
+      >Figure Skating</label
+    >
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="gymnastics"
+      value="gymnastics"
+      class="form-check-input"
+    /><label for="gymnastics" class="form-check-label">Gymnastics</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="ice-hockey"
+      value="ice-hockey"
+      class="form-check-input"
+    /><label for="ice-hockey" class="form-check-label">Ice Hockey</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="martial-arts"
+      value="martial-arts"
+      class="form-check-input"
+    /><label for="martial-arts" class="form-check-label">Martial Arts</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="mixed-martial-arts"
+      value="mixed-martial-arts"
+      class="form-check-input"
+    /><label for="mixed-martial-arts" class="form-check-label"
+      >Mixed Martial Arts</label
+    >
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="modern-pentathlon"
+      value="modern-pentathlon"
+      class="form-check-input"
+    /><label for="modern-pentathlon" class="form-check-label"
+      >Modern Pentathlon</label
+    >
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="motorcycle-racing"
+      value="motorcycle-racing"
+      class="form-check-input"
+    /><label for="motorcycle-racing" class="form-check-label"
+      >Motorcycle Racing</label
+    >
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="netball"
+      value="netball"
+      class="form-check-input"
+    /><label for="netball" class="form-check-label">Netball</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="polo"
+      value="polo"
+      class="form-check-input"
+    /><label for="polo" class="form-check-label">Polo</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="racquetball"
+      value="racquetball"
+      class="form-check-input"
+    /><label for="racquetball" class="form-check-label">Racquetball</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="rowing"
+      value="rowing"
+      class="form-check-input"
+    /><label for="rowing" class="form-check-label">Rowing</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="rugby"
+      value="rugby"
+      class="form-check-input"
+    /><label for="rugby" class="form-check-label">Rugby</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="sailing"
+      value="sailing"
+      class="form-check-input"
+    /><label for="sailing" class="form-check-label">Sailing</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="softball"
+      value="softball"
+      class="form-check-input"
+    /><label for="softball" class="form-check-label">Softball</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="shooting"
+      value="shooting"
+      class="form-check-input"
+    /><label for="shooting" class="form-check-label">Shooting</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="skateboarding"
+      value="skateboarding"
+      class="form-check-input"
+    /><label for="skateboarding" class="form-check-label">Skateboarding</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="skeet-shooting"
+      value="skeet-shooting"
+      class="form-check-input"
+    /><label for="skeet-shooting" class="form-check-label"
+      >Skeet Shooting</label
+    >
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="skeleton"
+      value="skeleton"
+      class="form-check-input"
+    /><label for="skeleton" class="form-check-label">Skeleton</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="snow-boarding"
+      value="snow-boarding"
+      class="form-check-input"
+    /><label for="snow-boarding" class="form-check-label">Snow Boarding</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="soccer"
+      value="soccer"
+      class="form-check-input"
+    /><label for="soccer" class="form-check-label">Soccer (Football)</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="squash"
+      value="squash"
+      class="form-check-input"
+    /><label for="squash" class="form-check-label">Squash</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="surfing"
+      value="surfing"
+      class="form-check-input"
+    /><label for="surfing" class="form-check-label">Surfing</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="swimming"
+      value="swimming"
+      class="form-check-input"
+    /><label for="swimming" class="form-check-label">Swimming</label>
+    <input
+      ng-model="newProfile.sports"
+      type="checkbox"
+      name="sports"
+      id="track-and-field"
+      value="track-and-field"
+      class="form-check-input"
+    /><label for="track-and-field" class="form-check-label"
+      >Track and Field</label
+    >
+  </div>
+</fieldset>
+
 <label for="nationality">Nationality</label>
 <select
   ng-model="newProfile.nationality"
@@ -47,4 +462,6 @@
     id="dob"
   />
 </div>
-<a class="btn btn-primary" type="submit" ui-sref="profile.about" role="button">Next</a>
+<a class="btn btn-primary" type="submit" ui-sref="profile.about" role="button"
+  >Next</a
+>
