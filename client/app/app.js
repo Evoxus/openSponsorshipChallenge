@@ -40,7 +40,9 @@ function FormCtrl($scope) {
   $scope.newProfile = {};
 
   $scope.processForm = function () {
-    alert("Successfully submitted profile!");
+    fetch(`${config.API_ENDPOINT}/profiles`, {
+      headers: {},
+    }).then((res) => (!res.ok) ? res.json().then((err) => Promise.reject(err)) : res.json());
   };
 }
 
