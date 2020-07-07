@@ -1,3 +1,5 @@
 <h2>Summary</h2>
-<p>Full Name  {{newProfile.fullName}}</p>
-<p>Sports {{newProfile.sports}}</p>
+<p>Full Name: {{newProfile.fullName}}</p>
+<h3>Sports</h3>
+<p ng-repeat="(key, value) in newProfile.sports">{{key}}</p>
+<button class="btn btn-primary">Submit</button>
