@@ -1,4 +1,5 @@
 "use strict";
+import config from './config.js';
 
 // Declare app level module which depends on views, and core components
 const athleteProfile = angular
