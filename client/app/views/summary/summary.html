@@ -1,5 +1,19 @@
 <h2>Summary</h2>
 <p>Full Name: {{newProfile.fullName}}</p>
-<h3>Sports</h3>
+<p>Date of Birth: {{newProfile.dob}}</p>
+<p>Nationality: {{newProfile.nationality}}</p>
+<p>Location: {{newProfile.location}}</p>
+<p>Association: {{newProfile.association}}</p>
+<p>Team: {{newProfile.team}}</p>
+<p>Gender: {{newProfile.gender}}</p>
+<h4>Sports</h4>
 <p ng-repeat="(key, value) in newProfile.sports">{{key}}</p>
+<p>About: {{newProfile.about}}</p>
+<p>Interests: {{newProfile.interests}}</p>
+<p>Charities: {{newProfile.charities}}</p>
+<h4>Social Media Handles</h4>
+<p ng-repeat="(key, value) in newProfile.socialMedia">{{key}} @ {{value}}</p>
+<p>Pets: {{newProfile.pets}}</p>
+<p>Drinks Alcohol: {{newProfile.drinks}}</p>
+<p>Married: {{newProfile.married}}</p>
 <button class="btn btn-primary">Submit</button>
